@@ -1,0 +1,10 @@
+You need JFFS (http://www.dd-wrt.com/wiki/index.php/JFFS) in order to use this
+script (as you need somewhere to store it).
+
+Enter your loopia credentials into the DDNS config, what is needed is the
+username, the hostname and the password.
+
+You then have to create a cronjob (http://www.dd-wrt.com/wiki/index.php/CRON)
+to run the script, for example:
+
+*/5 * * * * root /jffs/updateIP.sh
