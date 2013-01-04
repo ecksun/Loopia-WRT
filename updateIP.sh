@@ -24,7 +24,7 @@ fi
 if $USE_PING ; then
     # The sed command removed everything but the contents of the first
     # parenthesis
-    resolved_ip=$(ping -c 1 ecksun.com | head -n 1 | sed 's/.*(\(.*\)).*/\1/')
+    resolved_ip=$(ping -c 1 -w 1 ecksun.com | head -n 1 | sed 's/.*(\(.*\)).*/\1/')
 fi
 
 url="http://$username:$password@dns.loopia.se/XDynDNSServer/XDynDNS.php?system=custom&wildcard=nochg&hostname=$hostname&myip=$myip"
